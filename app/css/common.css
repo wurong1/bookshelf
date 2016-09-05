@@ -1,0 +1,31 @@
+.head_photo {
+            border:solid 1px rgba(158, 158, 158, 0.32);
+            border-radius:50% ;
+            width:100px;
+            height:100px;
+            margin-left:auto;
+            margin-right:auto;
+            margin-top:30%; 
+            box-shadow: 3px 1px 0px #9C9898;
+            background-image: url("../imags/user1.jpg");
+        }
+
+.md-input-focused .md-input{
+	border-color: #4BCE9D!important
+}
+.md-input-focused label{
+	color: #4BCE9D!important
+}
+.x-input{
+	width: 70%;
+    margin: 20px auto 0px auto;
+}
+.in-btn{
+	width: 70%;
+    margin: 20px auto 0px auto;
+    background-color: #4BCE9D!important;
+    color:white;
+}
+.in-btn span{
+    color:white;
+}

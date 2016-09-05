@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" >
+	<link rel="stylesheet" href="css/common.css" >
+</head>
+<body ng-app="app" ng-controller="mainCtrl">
+	<md-toolbar style="background:#4BCE9D">
+	    <div class="md-toolbar-tools">
+	      <h2 class="md-flex">Login</h2>
+	    </div>
+    </md-toolbar>
+    <md-content layout-padding style="height:100%">
+	    <form name="loginForm" action="/home" method="post">
+		    <div class="head_photo" ></div>
+		    <md-input-container class="md-icon-float md-block x-input">
+			    <label>Name</label>
+			    <input  type="text" name="userName" ng-model="userName" required>
+		    </md-input-container>
+		     <md-input-container class="md-icon-float md-block x-input">
+			    <label>Password</label>
+			    <input  type="text" name="password" ng-model="password" required>
+		    </md-input-container>
+		    <div style="text-align:center">
+		        <input class="md-raised in-btn" type="submit" value="Login"/>
+		    </div>
+		</form>  
+    </md-content>
+</body>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-aria/angular-aria.min.js"></script>
+<script src="bower_components/angular-messages/angular-messages.min.js"></script>
+<script src="bower_components/angular-material/angular-material.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="scripts/angular/app.js"></script>
+<script src="scripts/angular/controller.js"></script>
+</html>

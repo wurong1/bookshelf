@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" >
+	<link rel="stylesheet" href="css/common.css" >
+</head>
+<body ng-app="app" ng-controller="homeCtrl" ng-init="searchBooks('history')">
+	<md-toolbar style="background:#4BCE9D">
+	    <div class="md-toolbar-tools">
+	      <h2 class="md-flex">Books Category</h2>
+	    </div>
+    </md-toolbar>
+    <md-content layout-padding style="height:100%">
+         <md-menu-content style="width:27%;position:absolute;top:8%">
+            <md-menu-item>
+              <md-button ng-click="searchBooks('history')">
+                History
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button ng-click="searchBooks('technology')">
+                Technology
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button ng-click="searchBooks('philosophy')">
+                Philosophy
+              </md-button>
+            </md-menu-item>
+          </md-menu-content>
+          <div style="margin-left:29%">
+          	<md-input-container md-no-float class="md-block" >
+          	  <span class="glyphicon glyphicon-search" style="float:right;margin-top:31px"></span>
+              <input ng-model="filter" placeholder="Search" style="width:40%;float:right;margin-top:21px">
+          	  <h3>Book of {{catalog}}</h3>
+            </md-input-container>
+          	
+          	<table class="table table-hover">
+          		<thead>
+          			<tr>
+          				<th>ID</th>
+          				<th>Name</th>
+          				<th>Author</th>
+          				<th>Published date</th>
+          				<th>Borrower</th>
+          			</tr>
+          		</thead>
+          		<tbody>
+          			<tr ng-repeat="item in data | filter:filter">
+          				<th scope="row"><a href="/detailPage?id={{item.id}}">{{item.id}}</a></th>
+          				<td>{{item.name}}</td>
+          				<td>{{item.author}}</td>
+          				<td>{{item.date}}</td>
+          				<td>{{item.borrower}}</td>
+          			</tr>
+          		</tbody>
+          	</table>
+          </div>
+    </div>
+    </md-content>
+</body>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-aria/angular-aria.min.js"></script>
+<script src="bower_components/angular-messages/angular-messages.min.js"></script>
+<script src="bower_components/angular-material/angular-material.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="scripts/angular/app.js"></script>
+<script src="scripts/angular/controller.js"></script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" >
+	<link rel="stylesheet" href="css/common.css" >
+</head>
+<body ng-app="app" ng-controller="detailCtrl" ng-init="init()">
+	<md-toolbar style="background:#4BCE9D">
+      <div class="md-toolbar-tools">
+        <h2 class="md-flex">Detail</h2>
+      </div>
+  </md-toolbar>
+  <md-content layout-padding style="height:100%">
+   <img src="imags/js.png" alt="" style="float:left;margin-right: 39px">
+   <div>
+    <h3>BookName:</h3>
+    <div>{{data.name}}</div>
+    <h3>Author:</h3>
+    <div>{{data.author}}</div>
+    <h3>Publish Date:</h3>
+    <div>{{data.date}}</div>
+   </div>
+  </md-content>
+</body>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-aria/angular-aria.min.js"></script>
+<script src="bower_components/angular-messages/angular-messages.min.js"></script>
+<script src="bower_components/angular-material/angular-material.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="scripts/angular/app.js"></script>
+<script src="scripts/angular/controller.js"></script>
+</html>
